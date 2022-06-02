@@ -1,0 +1,47 @@
+@use "../globals" as *;
+@use "../utilities" as *;
+
+.footer {
+  padding: 10rem 3rem;
+  background-color: #37383d;
+
+  &__nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  &__item {
+    margin-right: 4rem;
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    color: #eee;
+    text-decoration: none;
+  }
+}
+
+.footer__item {
+}
+
+.footer__link {
+}
+
+.footer__logo {
+  height: 5rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+.footer__copyright {
+  font-size: 1.4rem;
+  color: #aaa;
+  text-align: center;
+}
+
+.footer__copyright .footer__link {
+  font-size: 1.4rem;
+}
