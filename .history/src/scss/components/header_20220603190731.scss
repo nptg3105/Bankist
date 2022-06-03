@@ -43,7 +43,7 @@
   }
 }
 
-@media (max-width: $sm-max) {
+@media (max-width: $sm-min) {
   .header {
     &__title {
       display: block;

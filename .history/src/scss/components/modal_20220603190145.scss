@@ -91,12 +91,5 @@
 @media (max-width: $xs-max) {
   .modal {
     width: 90%;
-    padding: 3rem 4rem;
-  }
-}
-
-@media (max-width: $xxs-max) {
-  .modal {
-    padding: 2rem 2rem;
   }
 }
