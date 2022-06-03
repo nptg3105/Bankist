@@ -1,0 +1,112 @@
+@use "../globals" as *;
+@use "../utilities" as *;
+
+/* NAVIGATION */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9rem;
+  width: 100%;
+  z-index: 100;
+
+  &__logo {
+    height: 4.5rem;
+    transition: all 0.3s;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__item {
+    margin-left: 4rem;
+  }
+
+  &__link:visited,
+  &__link:link {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+  }
+  &__link--btn:link,
+  &__link--btn:visited {
+    padding: 0.8rem 2.5rem;
+    border-radius: 3rem;
+    background-color: var(--color-primary);
+    color: #222;
+  }
+
+  &__link--btn:hover,
+  &__link--btn:active {
+    color: inherit;
+    background-color: var(--color-primary-darker);
+    color: #333;
+  }
+
+  &__hamburger {
+    position: relative;
+    span {
+      height: 1px;
+      width: 5rem;
+      background-color: black;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 1px;
+      width: 5rem;
+      top: 100%;
+      left: 0;
+      background-color: black;
+    }
+  }
+}
+
+.nav__mobile {
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  position: relative;
+
+  .nav__links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+  }
+
+  .nav__item {
+    margin-bottom: 2rem;
+
+    .nav__link {
+      font-size: 3rem;
+    }
+  }
+}
+
+/* nav and stickly class at the same time */
+
+.nav.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+  animation: scroll-down 0.4s ease;
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

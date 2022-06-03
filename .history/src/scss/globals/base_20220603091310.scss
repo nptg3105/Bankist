@@ -1,0 +1,71 @@
+@use "./variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  // background-color: #f3f3f3;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fluid {
+  height: 100%;
+  width: 100%;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: 767px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: $xxs-min) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: $xs-min) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: $sm-min) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: $md-min) {
+  .container {
+    max-width: $container-width;
+  }
+}
+
+.hidden {
+  overflow: hidden;
+}
