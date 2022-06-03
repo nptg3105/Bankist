@@ -412,11 +412,11 @@
 }
 
 @media (max-width: $xxs-max) {
-  // .features {
-  //   .lazy-img {
-  //     filter: blur(30px);
-  //   }
-  // }
+  .features {
+    .lazy-img {
+      filter: unset;
+    }
+  }
   .section--sign-up {
     .btn {
       font-size: 1.4rem;

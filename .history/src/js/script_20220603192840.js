@@ -119,20 +119,20 @@ btnHamburger.addEventListener("click", function () {
   document.querySelector("body").classList.toggle("overflow-hidden");
 });
 
-// window.addEventListener("resize", function () {
-//   const windowWidth = nav.getBoundingClientRect().width;
-//   // console.log(windowWidth);
-//   // location.reload();
+window.addEventListener("resize", function () {
+  const windowWidth = screen.width;
+  // console.log(windowWidth);
+  // location.reload();
 
-//   if (windowWidth > 992) {
-//     btnHamburger.style.display = "none";
-//     navLinks.classList.remove("hide");
-//   } else {
-//     navLinks.classList.add("hide");
-//     btnHamburger.classList.remove("hide");
-//     btnHamburger.style.display = "flex";
-//   }
-// });
+  if (windowWidth > 992) {
+    btnHamburger.style.display = "none";
+    navLinks.classList.remove("hide");
+  } else {
+    navLinks.classList.add("hide");
+    btnHamburger.classList.remove("hide");
+    btnHamburger.style.display = "flex";
+  }
+});
 
 navMobileLink.forEach((link) =>
   link.addEventListener("click", function () {
