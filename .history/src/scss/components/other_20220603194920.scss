@@ -418,14 +418,12 @@
 
 @media (max-width: $xxs-max) {
   .features {
-    &__img {
+    .lazy-img {
       display: none;
     }
 
     .img-mobile {
-      width: 100%;
       display: block;
-      margin-bottom: 4rem;
     }
   }
 

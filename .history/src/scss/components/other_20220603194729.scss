@@ -44,8 +44,7 @@
     margin-bottom: 1rem;
   }
 
-  &__img,
-  .img-mobile {
+  &__img {
     width: 45%;
   }
 
@@ -417,18 +416,11 @@
 }
 
 @media (max-width: $xxs-max) {
-  .features {
-    &__img {
-      display: none;
-    }
-
-    .img-mobile {
-      width: 100%;
-      display: block;
-      margin-bottom: 4rem;
-    }
-  }
-
+  // .features {
+  //   .lazy-img {
+  //     filter: blur(30px);
+  //   }
+  // }
   .section--sign-up {
     .btn {
       font-size: 1.4rem;
