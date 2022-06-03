@@ -50,7 +50,7 @@ document.querySelector(".nav__links").addEventListener("click", (e) => {
   e.preventDefault();
   if (e.target.classList.contains("nav__link")) {
     const id = e.target.getAttribute("href");
-    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
   }
 });
 
@@ -281,6 +281,11 @@ const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
 const email = document.getElementById("email");
 
+console.log(form);
+console.log(firstName);
+console.log(lastName);
+console.log(email);
+
 //Show input error message
 function showError(input, message) {
   let parent = input.parentElement;
@@ -369,5 +374,6 @@ form.addEventListener("submit", function (e) {
   } else {
     modal.classList.add("hidden");
     overlay.classList.add("hidden");
+    input.value = "";
   }
 });

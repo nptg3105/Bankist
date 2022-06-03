@@ -281,6 +281,11 @@ const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
 const email = document.getElementById("email");
 
+console.log(form);
+console.log(firstName);
+console.log(lastName);
+console.log(email);
+
 //Show input error message
 function showError(input, message) {
   let parent = input.parentElement;
@@ -355,7 +360,7 @@ function checkLengthError(input, min, max) {
   return false;
 }
 
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", function (e, input) {
   e.preventDefault();
 
   let isEmptyError = checkEmptyError([firstName, lastName, email]);
@@ -369,5 +374,6 @@ form.addEventListener("submit", function (e) {
   } else {
     modal.classList.add("hidden");
     overlay.classList.add("hidden");
+    input.value = "";
   }
 });

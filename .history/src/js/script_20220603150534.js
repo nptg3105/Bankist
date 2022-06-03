@@ -281,6 +281,11 @@ const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
 const email = document.getElementById("email");
 
+console.log(form);
+console.log(firstName);
+console.log(lastName);
+console.log(email);
+
 //Show input error message
 function showError(input, message) {
   let parent = input.parentElement;
@@ -330,7 +335,7 @@ function checkEmailError(input) {
   let isEmailError = !regexEmail.test(input.value);
 
   if (regexEmail.test(input.value)) {
-    showSuccess(input);
+    showSuccess();
   } else {
     showError(input, "Please enter a valid email");
   }
@@ -368,6 +373,5 @@ form.addEventListener("submit", function (e) {
     //do nothing
   } else {
     modal.classList.add("hidden");
-    overlay.classList.add("hidden");
   }
 });

@@ -280,6 +280,12 @@ const form = document.querySelector(".modal__form");
 const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
 const email = document.getElementById("email");
+const modal = document.querySelector(".modal");
+
+console.log(form);
+console.log(firstName);
+console.log(lastName);
+console.log(email);
 
 //Show input error message
 function showError(input, message) {
@@ -288,9 +294,6 @@ function showError(input, message) {
 
   parent.classList.add("error");
   small.innerText = message;
-
-  console.log(parent);
-  console.log(small);
 }
 
 //Show success message
@@ -330,7 +333,7 @@ function checkEmailError(input) {
   let isEmailError = !regexEmail.test(input.value);
 
   if (regexEmail.test(input.value)) {
-    showSuccess(input);
+    showSuccess();
   } else {
     showError(input, "Please enter a valid email");
   }
@@ -367,7 +370,6 @@ form.addEventListener("submit", function (e) {
   if (isEmailError || isFirstNameError || isLastNameError) {
     //do nothing
   } else {
-    modal.classList.add("hidden");
-    overlay.classList.add("hidden");
+    form.classList.add("hidden");
   }
 });

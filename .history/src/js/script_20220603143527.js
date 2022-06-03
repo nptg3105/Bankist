@@ -121,7 +121,7 @@ btnHamburger.addEventListener("click", function () {
 
 window.addEventListener("resize", function () {
   const windowWidth = nav.getBoundingClientRect().width;
-  // console.log(windowWidth);
+  console.log(windowWidth);
   // location.reload();
 
   if (windowWidth > 992) {
@@ -288,9 +288,6 @@ function showError(input, message) {
 
   parent.classList.add("error");
   small.innerText = message;
-
-  console.log(parent);
-  console.log(small);
 }
 
 //Show success message
@@ -308,66 +305,8 @@ function checkEmptyError(listInput) {
   listInput.forEach((input) => {
     input.value = input.value.trim();
 
-    console.log(input.value);
-
     if (!input.value) {
       isEmptyError = true;
-
-      showError(input, "Please fill the information");
-    } else {
-      showSuccess(input);
     }
   });
-
-  return isEmptyError;
 }
-
-function checkEmailError(input) {
-  const regexEmail =
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
-  input.value = input.value.trim();
-  let isEmailError = !regexEmail.test(input.value);
-
-  if (regexEmail.test(input.value)) {
-    showSuccess(input);
-  } else {
-    showError(input, "Please enter a valid email");
-  }
-
-  return isEmailError;
-}
-
-function checkLengthError(input, min, max) {
-  input.value = input.value.trim();
-
-  if (input.value.length < min) {
-    showError(input, `Please enter at least ${min} characters`);
-    return true;
-  }
-
-  if (input.value.length > max) {
-    showError(input, `Please enter less than ${max} characters`);
-    return true;
-  }
-
-  showSuccess(input);
-  return false;
-}
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  let isEmptyError = checkEmptyError([firstName, lastName, email]);
-
-  let isEmailError = checkEmailError(email);
-  let isFirstNameError = checkLengthError(firstName, 3, 15);
-  let isLastNameError = checkLengthError(lastName, 3, 15);
-
-  if (isEmailError || isFirstNameError || isLastNameError) {
-    //do nothing
-  } else {
-    modal.classList.add("hidden");
-    overlay.classList.add("hidden");
-  }
-});

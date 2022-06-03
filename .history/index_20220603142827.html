@@ -367,7 +367,7 @@
       </div>
     </footer>
 
-    <div class="modal hidden">
+    <div class="modal">
       <button class="btn--close-modal">&times;</button>
       <h2 class="modal__header">
         Open your bank account <br />
@@ -375,18 +375,18 @@
       </h2>
       <form class="modal__form">
         <div class="modal__control">
-          <label for="first-name" class="modal__label">First Name</label>
-          <input id="first-name" class="modal__input" type="text" />
-          <small></small>
+          <label class="modal__label">First Name</label>
+          <input id="first-name" class="modal__input" type="text" required />
+          <small>Please enter a valid name!</small>
         </div>
         <div class="modal__control">
           <label for="last-name" class="modal__label">Last Name</label>
-          <input id="last-name" class="modal__input" type="text" />
+          <input id="last-name" class="modal__input" type="text" required />
           <small></small>
         </div>
         <div class="modal__control">
           <label for="email" class="modal__label">Email Address</label>
-          <input id="email" class="modal__input" type="email" />
+          <input id="email" class="modal__input" type="email" required />
           <small></small>
         </div>
         <button type="submit" class="btn">Next step &rarr;</button>

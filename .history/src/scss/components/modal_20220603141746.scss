@@ -20,6 +20,20 @@
   }
 
   &__form {
+    // margin: 0 3rem;
+    // display: grid;
+    // grid-template-columns: 1fr 2fr;
+    // align-items: center;
+    // gap: 2.5rem;
+
+    label {
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+
+    input {
+    }
+
     button {
       grid-column: 1 / span 2;
       justify-self: center;
@@ -28,17 +42,7 @@
   }
 
   &__control {
-    margin-bottom: 2rem;
-
-    small {
-      display: block;
-      margin-top: 1rem;
-      font-size: 1.5rem;
-    }
-  }
-
-  &__control.error {
-    color: var(--color-tertiary-darker);
+    margin-bottom: 2.5rem;
   }
 
   &__input {
@@ -47,15 +51,6 @@
     border: 1px solid #ddd;
     border-radius: 0.5rem;
     width: 100%;
-
-    &:focus {
-      outline: 1px solid var(--color-primary);
-    }
-  }
-
-  &__label {
-    font-size: 1.7rem;
-    font-weight: 500;
   }
 }
 

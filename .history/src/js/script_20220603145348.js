@@ -288,8 +288,6 @@ function showError(input, message) {
 
   parent.classList.add("error");
   small.innerText = message;
-
-  console.log(parent);
   console.log(small);
 }
 
@@ -307,8 +305,6 @@ function checkEmptyError(listInput) {
 
   listInput.forEach((input) => {
     input.value = input.value.trim();
-
-    console.log(input.value);
 
     if (!input.value) {
       isEmptyError = true;
@@ -330,7 +326,7 @@ function checkEmailError(input) {
   let isEmailError = !regexEmail.test(input.value);
 
   if (regexEmail.test(input.value)) {
-    showSuccess(input);
+    showSuccess();
   } else {
     showError(input, "Please enter a valid email");
   }
@@ -367,7 +363,6 @@ form.addEventListener("submit", function (e) {
   if (isEmailError || isFirstNameError || isLastNameError) {
     //do nothing
   } else {
-    modal.classList.add("hidden");
-    overlay.classList.add("hidden");
+    //submit
   }
 });
