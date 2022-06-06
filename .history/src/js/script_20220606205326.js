@@ -372,5 +372,6 @@ form.addEventListener("submit", function (e) {
     noti.classList.add("active");
     modal.classList.add("hidden");
     overlay.classList.add("hidden");
+    overlay.classList.add("fade-out");
   }
 });

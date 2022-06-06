@@ -1,0 +1,31 @@
+@use "../globals" as *;
+@use "../utilities" as *;
+
+.notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background-color: #f3f3f3;
+  padding: 4rem 4rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+  text-align: center;
+  font-size: rem(40);
+  color: var(--color-primary);
+  font-weight: 700;
+
+  &__header {
+    margin-bottom: rem(30);
+  }
+
+  &__icon {
+    font-size: rem(60);
+  }
+}
+
+.notification.active {
+  animation: fade-out 2.5s forwards;
+}

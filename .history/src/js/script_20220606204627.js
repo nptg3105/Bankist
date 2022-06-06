@@ -369,7 +369,6 @@ form.addEventListener("submit", function (e) {
     //do nothing
   } else {
     noti.classList.remove("hidden");
-    noti.classList.add("active");
     modal.classList.add("hidden");
     overlay.classList.add("hidden");
   }
